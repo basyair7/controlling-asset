@@ -35,6 +35,7 @@ def database():
     id_pass.delete(0,END)
     id_user.delete(0,END)
 
+# initialisasikan tkinter dan mengatur nama & geometry nya
 home = Tk()
 home.title('Aplikasi Admin')
 home.geometry('420x350')
@@ -43,7 +44,7 @@ home.geometry('420x350')
 frhome = Frame(home, relief=RIDGE, borderwidth=5)
 frhome.grid(row=0, column=0, ipadx=1, ipady=5, padx=5, pady=10)
 
-
+# buat label di aplikasi
 lbl_adm = Label(frhome,text="Form Admin Website Baru")
 lbl_adm.grid(row=0, column=1, columnspan=3, padx=10, pady=(10,0))
 lbl_name = Label(frhome, text="Nama\t\t:")
@@ -53,6 +54,7 @@ lbl_user.grid(row=2, column=1, columnspan=3)
 lbl_pass = Label(frhome, text="Password\t:")
 lbl_pass.grid(row=3, column=1, columnspan=3)
 
+# buat label di aplikasi
 lbl_localhost = Label(frhome,text="Localhost phpmyadmin(mysql)")
 lbl_localhost.grid(row=4, column=1, columnspan=3, padx=10, pady=(10,0))
 lbl_local = Label(frhome, text="Localhost\t:")
@@ -62,6 +64,7 @@ lbl_usr.grid(row=6, column=1, columnspan=3)
 lbl_passwd = Label(frhome, text="Password\t:")
 lbl_passwd.grid(row=7, column=1, columnspan=3)
 
+# buat kolom pengisian akun baru
 id_name = Entry(frhome, width=20)
 id_name.grid(row=1, column=4, columnspan=3, padx=10, pady=(10,0))
 id_user = Entry(frhome, width=20)
@@ -69,6 +72,7 @@ id_user.grid(row=2, column=4, columnspan=3, padx=10, pady=(10,0))
 id_pass = Entry(frhome, width=20)
 id_pass.grid(row=3, column=4, columnspan=3, padx=10, pady=(10,0))
 
+# buat kolom pengisian untuk koneksi ke xampp
 id_local = Entry(frhome, width=20)
 id_local.grid(row=5, column=4, columnspan=3, padx=10, pady=(10,0))
 id_usr = Entry(frhome, width=20)
@@ -76,9 +80,8 @@ id_usr.grid(row=6, column=4, columnspan=3, padx=10, pady=(10,0))
 id_passwd = Entry(frhome, width=20)
 id_passwd.grid(row=7, column=4, columnspan=3, padx=10, pady=(10,0))
 
+# buat tombol enter
 btn_enter = Button(home, text="Enter", command=database)
 btn_enter.grid(row=3, column=0, columnspan=2, padx=(10,0), pady=10, ipadx=23)
-
-
 
 home.mainloop()
